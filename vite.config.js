@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/React-Vite-QUIZ-GAME", // Set the base path for the project to ensure correct asset loading when deployed
+  base: "/-React-Vite-QUIZ-GAME", // Set the base path for the project to ensure correct asset loading when deployed
 });
