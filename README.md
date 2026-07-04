@@ -1,16 +1,49 @@
-# React + Vite
+# Quiz Project Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, animated trivia game built with React and Vite. Each round pulls five multiple-choice questions from the Open Trivia DB API, shuffles the answers, and lets you test how many you can get right before restarting for another run.
 
-Currently, two official plugins are available:
+## Live deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is configured for GitHub Pages deployment.
 
-## React Compiler
+- Homepage: [https://LightBurst577.github.io/-React-Vite-QUIZ-GAME]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Start screen with animated transition into the quiz
+- Fetches a fresh set of questions from Open Trivia DB
+- Randomized answer order for every round
+- Answer selection with immediate visual feedback after checking
+- Score summary at the end of the game
+- Confetti celebration for a perfect score
+- Play-again flow for quick replaying
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19
+- Vite
+- `clsx` for conditional styling
+- `html-entities` for decoding trivia text
+- `react-confetti` for the perfect-score effect
+- `react-hot-toast` for end-of-game messages
+
+## How To Play
+
+1. Click Start Quiz.
+2. Answer all five questions.
+3. Click Check Answers once every question has been answered.
+4. Review your score and play again if you want another round.
+
+## Project Structure
+
+- `src/App.jsx` - main quiz state and screen flow
+- `src/components/StartPage.jsx` - landing screen and start transition
+- `src/components/Quiz.jsx` - question rendering, scoring, and end-game feedback
+- `src/main.jsx` - app entry point
+
+## Notes
+
+- Questions are fetched live from Open Trivia DB when a round starts.
+- Answers are shuffled on each round, so the same question may appear with a different order.
+- If the API request fails, the quiz will not load questions until a new round is started successfully.
+- I only encountered 1 bug, so bugs are expected 😭🙏
